@@ -1,5 +1,8 @@
 import React, {createContext, useContext, useReducer} from 'react';
 
+// ROUTER
+import {BrowserRouter, Route} from 'react-router-dom';
+
 // COMPONENTS
 import Header from './components/common/header/Header';
 import Footer from './components/common/Footer';
@@ -28,11 +31,13 @@ function App() {
     }
   };
   return (
-    <StateContext.Provider value={useReducer(reducer, initialState)}>
-      <Header></Header>
-      <HomePage></HomePage>
-      <Footer></Footer>
-    </StateContext.Provider>
+    <BrowserRouter>
+      <StateContext.Provider value={useReducer(reducer, initialState)}>
+        <Header></Header>
+        <HomePage></HomePage>
+        <Footer></Footer>
+      </StateContext.Provider>
+    </BrowserRouter>
   )
 }
 

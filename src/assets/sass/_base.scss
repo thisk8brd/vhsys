@@ -29,3 +29,21 @@ body {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+a {
+  color: rgba(255,255,255,2);
+  text-decoration: none;
+  transition: all .5s;
+
+  &:hover {
+    border-bottom: 1px solid rgba($color: #fff, $alpha: .5)
+  }
+}
+
+.is {
+
+  &--green {
+    color: rgba(57, 232, 184, 1);
+  }
+
+}

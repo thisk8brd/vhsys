@@ -1,0 +1,25 @@
+.breadcrumb {
+
+  list-style: none;
+  display: flex;
+  color: rgba(255,255,255,1);
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+
+    margin-right: 1rem;
+    font-weight: 300;
+
+    &.active {
+      font-weight: 500;
+    }
+
+  }
+
+  :not(:last-of-type)::after {
+    content: ' >';
+  }
+
+}

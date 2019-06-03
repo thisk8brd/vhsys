@@ -1,0 +1,83 @@
+.hero {
+
+  position: relative;
+
+  @include mq(sm) {
+    height: 80vh;
+    background-color: blue;
+    background-size: cover;
+    background-position: center;
+    -webkit-clip-path: ellipse(100% 53% at 50% 46%);
+    clip-path: ellipse(100% 53% at 50% 46%);
+    z-index: 2;
+  } 
+
+  &__container {
+    display: flex;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 2rem;
+  }
+
+  &__banner-info {
+
+  }
+
+  .banner {
+
+    &-list {
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      &__icon {
+        width: 1.5rem;
+        height: 1.2rem;
+        margin-right: 1rem;
+      }
+
+    }
+
+  }
+
+  &__heading {
+    font-weight: 400;
+    display: flex;
+    line-height: 1.2;
+    flex-direction: column;
+    
+    span {
+      &:last-of-type {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__paragraph {
+    color: rgba(255,255,255,1);
+  }
+
+  &__form {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+
+  }
+
+  &__breadcrumb {
+
+  }
+
+}
