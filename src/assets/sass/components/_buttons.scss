@@ -35,4 +35,12 @@
     }
   }
 
+  &--services {
+    background-color: $color-green;
+    color: white;
+    padding: .8rem 5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
 }

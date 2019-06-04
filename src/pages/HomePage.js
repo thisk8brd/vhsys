@@ -2,12 +2,13 @@ import React from 'react';
 
 // COMPONENTS
 import Hero from './../components/hero/Hero';
-import Gap from './../components/common/Gap';
+import Services from './../components/services/Services';
 
 function HomePage (props) {
   return (
     <div className="main">
       <Hero/>
+      <Services/>
     </div>
   )
 }

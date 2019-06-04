@@ -1,0 +1,83 @@
+.services {
+
+  &__container {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  &__info {
+
+    color: $color-primary;
+    text-align: center;
+
+  }
+
+  &__title {
+
+    font-size: 4rem;
+    font-weight: 500;
+
+  }
+
+  &__subtitle {
+
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+
+  }
+
+  &__description {
+    font-size: 1.8rem;
+  }
+
+  &__list {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    color: $color-primary;
+
+    .list {
+
+      &__title {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+    }
+
+    &--inner {
+      list-style: none;
+      padding: 2rem;
+      margin: 0;
+    }
+
+    .inner {
+
+      &__item {
+
+      }
+
+    }
+
+  }
+
+  &__item {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+}
