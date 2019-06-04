@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
-function HeroForm (props) {
+import Gap from './../common/Gap';
+
+function HeroForm(props) {
 
   const [formData, setformData] = useState({});
 
@@ -19,7 +21,7 @@ function HeroForm (props) {
             ...formData,
             email: e.target.value
           })
-        }}/>
+        }} />
       </div>
       <div className="form__group">
         <label htmlFor="name" className="form__label">Seu nome completo</label>
@@ -28,7 +30,7 @@ function HeroForm (props) {
             ...formData,
             name: e.target.value
           })
-        }}/>
+        }} />
       </div>
       <div className="form__group">
         <label htmlFor="phone" className="form__label">Número do seu telefone</label>
@@ -37,20 +39,16 @@ function HeroForm (props) {
             ...formData,
             phone: e.target.value
           })
-        }}/>
+        }} />
       </div>
       <div className="form__group">
         <label htmlFor="enterprise" className="form__label">Já tem uma empresa formalizada?</label>
-        <select name="enterprise" id="enterprise" className="form__input form__input--select">
-          <option value="1" className='form__option'>
-            Selecione uma opção
-          </option>
-          <option value="1" className='form__option'>
-            Selecione uma opção
-          </option>
-          <option value="1" className='form__option'>
-            Selecione uma opção
-          </option>
+        <select class="form__select">
+          <option>This is a native select element</option>
+          <option>Apples</option>
+          <option>Bananas</option>
+          <option>Grapes</option>
+          <option>Oranges</option>
         </select>
       </div>
       <div className="form__group">
@@ -60,7 +58,7 @@ function HeroForm (props) {
             ...formData,
             username: e.target.value
           })
-        }}/>
+        }} />
       </div>
       <div className="form__group">
         <label htmlFor="password" className="form__label">Digite sua senha</label>
@@ -69,7 +67,17 @@ function HeroForm (props) {
             ...formData,
             password: e.target.value
           })
-        }}/>
+        }} />
+      </div>
+      <Gap height={'2rem'}/>
+      <div className="form__group">
+        <button className="btn btn--secondary" onClick={() => console.log('Experimente grátis')}>
+          Experimente Grátis
+        </button>
+      </div>
+      <Gap height={'2rem'}/>
+      <div className="form__group">
+        <p className='form__terms'>Clicando no botão acima você concorda com nossos <a href={'#'} className="form__terms--link">termos de uso</a>.</p>
       </div>
     </div>
   </form>

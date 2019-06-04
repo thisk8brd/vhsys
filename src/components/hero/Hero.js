@@ -32,10 +32,11 @@ function Hero(props) {
   }
 
   return (
-    <section className="hero" style={{
-      backgroundImage: `url("${bg}")`
-    }}>
-      <Gap height='15rem' />
+    <section className="hero">
+      <div className="hero__bg" style={{
+        backgroundImage: `url("${bg}")`
+      }}></div>
+      <Gap height='7rem' />
       <div className="container hero__container">
         <div className="hero__content">
           <ul className="breadcrumb hero__breadcrumb">

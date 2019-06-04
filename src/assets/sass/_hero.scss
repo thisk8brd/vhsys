@@ -2,18 +2,37 @@
 
   position: relative;
 
-  @include mq(sm) {
-    height: 80vh;
+  &__bg {
+    height: 150vh;
     background-color: blue;
     background-size: cover;
     background-position: center;
     -webkit-clip-path: ellipse(100% 53% at 50% 46%);
     clip-path: ellipse(100% 53% at 50% 46%);
-    z-index: 2;
-  } 
+    z-index: -1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    
+    @include mq(sm) {
+      height: 100vh;
+    }
+    @include mq(md) {
+      height: 80vh;
+    }
+  }
 
   &__container {
     display: flex;
+    z-index: 2;
+    flex-direction: column;
+
+    @include mq(md) {
+      flex-direction: row;
+      margin-top: 5rem;
+    }
   }
 
   &__content {
@@ -22,7 +41,9 @@
   }
 
   &__banner-info {
-
+    @include mq(md) {
+      margin-top: 5rem;
+    }
   }
 
   .banner {
@@ -32,7 +53,10 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      columns: 2;
+      
+      @include mq(sm) {
+        columns: 2;
+      }
 
       &__item {
         display: flex;
@@ -71,8 +95,11 @@
 
   &__form {
     flex: 1;
-    padding: 1rem;
     display: flex;
+
+    @include mq(md) {
+      padding: 1rem; 
+    }
 
   }
 
