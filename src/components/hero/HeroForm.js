@@ -43,7 +43,7 @@ function HeroForm(props) {
       </div>
       <div className="form__group">
         <label htmlFor="enterprise" className="form__label">Já tem uma empresa formalizada?</label>
-        <select class="form__select">
+        <select className="form__select">
           <option>This is a native select element</option>
           <option>Apples</option>
           <option>Bananas</option>
