@@ -35,7 +35,7 @@
 
     @include mq(xs) {
       justify-content: flex-start;
-      overflow: scroll;
+      overflow-x: scroll;
     }
     @include mq(sm) {
       justify-content: flex-start;
