@@ -1,0 +1,14 @@
+.clients {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+  }
+
+  &__image {
+    margin: 0 2rem;
+    width: 100%;
+    height: auto;
+  }
+}

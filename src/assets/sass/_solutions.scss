@@ -1,13 +1,10 @@
 .solutions {
-
   font-family: Titillium Web, sans-serif;
-
+  background-color: $color-grey;
   &__container {
-
     display: flex;
     flex-direction: column;
     max-width: 100rem;
-
   }
 
   &__heading {
@@ -19,7 +16,6 @@
   }
 
   &__list {
-
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -28,7 +24,6 @@
     margin: 0;
 
     .item {
-
       display: flex;
       flex-direction: column;
       justify-content: stretch;
@@ -53,9 +48,6 @@
         color: $color-primary;
         text-align: center;
       }
-
     }
-
   }
-
 }

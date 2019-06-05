@@ -1,21 +1,24 @@
-@import './base';
-@import './mixin';
-@import './typography';
+@import "./base";
+@import "./mixin";
+@import "./typography";
 
 // COMMON
-@import './common/header';
-@import './common/breadcrumb';
+@import "./common/header";
+@import "./common/breadcrumb";
+@import "./common/footer";
 
 // BUTTONS
-@import './components/buttons';
+@import "./components/buttons";
 
 // ICONS
-@import './components/icons';
+@import "./components/icons";
 
 // COMPONENTS
-@import './hero';
-@import './components/form';
-@import './services';
-@import './promo';
-@import './solutions';
-@import './prices';
+@import "./hero";
+@import "./components/form";
+@import "./services";
+@import "./promo";
+@import "./solutions";
+@import "./prices";
+@import "./clients";
+@import "./faq";

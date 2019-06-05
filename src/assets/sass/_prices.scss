@@ -1,5 +1,4 @@
 .prices {
-
   &__container {
     padding: 5rem 0;
   }
@@ -9,27 +8,26 @@
     font-size: 4rem;
     color: $color-primary;
     font-weight: 500;
-    padding: 2rem 0;
+    padding: 2rem;
   }
 
   &__description {
     color: $color-primary;
     text-align: center;
     font-size: 1.6rem;
+    padding: 0 2rem;
   }
 
   &__list {
-
     display: grid;
     justify-content: center;
     justify-items: center;
     grid-template-columns: repeat(7, 16rem);
     // grid-gap: 1rem;
-
   }
 
   &__scrollable {
-    overflow: scroll;
+    overflow: hidden;
     padding: 5rem 0;
     display: flex;
     align-items: center;
@@ -37,9 +35,11 @@
 
     @include mq(xs) {
       justify-content: flex-start;
+      overflow: scroll;
     }
     @include mq(sm) {
       justify-content: flex-start;
+      overflow: hidden;
     }
   }
 
@@ -49,6 +49,7 @@
     padding: 2rem 0;
     border: 2px solid $color-blue-price;
     position: relative;
+    transition: all 0.3s;
 
     display: flex;
     flex-direction: column;
@@ -71,35 +72,41 @@
       border-radius: 0px 20px 20px 0px;
     }
 
-    &--featured {
-      background-color: $color-blue-price;
-      transform: scaleY(1.03);
-      z-index: 99;
+    &--featured,
+    &:hover {
+      &:not(:first-of-type) {
+        background-color: $color-blue-price;
+        transform: scaleY(1.03);
+        z-index: 98;
 
-      .prices__item--title,
-      .prices__item--from,
-      .prices__item--description,
-      .prices__item--economy {
-        color: white;
-        span {
+        .prices__item--title,
+        .prices__item--from,
+        .prices__item--description,
+        .prices__item--economy {
+          color: white;
+          span {
+            color: white;
+          }
+        }
+
+        .btn--contract {
+          color: white;
+          background-color: $color-green;
+          box-shadow: 0 3px 0 1px $color-green;
+          border-color: $color-green;
+        }
+
+        .prices__item-content,
+        .item-content,
+        .item--content__item,
+        li {
           color: white;
         }
       }
+    }
 
-      .btn--contract {
-        color: white;
-        background-color: $color-green;
-        box-shadow: 0 3px 0 1px $color-green;
-        border-color: $color-green;
-      }
-
-      .prices__item-content,
-      .item-content,
-      .item--content__item,
-      li {
-        color: white;
-      }
-
+    &:hover {
+      z-index: 99;
     }
 
     &--content {
@@ -108,7 +115,7 @@
       justify-content: center;
       flex-direction: column;
       img {
-        width: 6rem; 
+        width: 6rem;
         height: auto;
       }
     }
@@ -138,8 +145,9 @@
       }
     }
 
-    &--description, &--economy {
-      color: rgba(0,0,0,.8);
+    &--description,
+    &--economy {
+      color: rgba(0, 0, 0, 0.8);
       margin: 0 1rem;
       font-size: 1.3rem;
       span {
@@ -147,39 +155,33 @@
         font-weight: 700;
       }
     }
-
   }
 
   &__discount {
-    padding: .5rem 1rem;
-    background-color: #FADF86;
+    padding: 0.5rem 1rem;
+    background-color: #fadf86;
     position: absolute;
     top: 0;
     right: 0;
     border: 2px solid $color-blue-price;
-    transform: translateY(-.4rem) translateX(.2rem);
+    transform: translateY(-0.4rem) translateX(0.2rem);
     border-radius: 7px 7px 7px 26px;
     z-index: 100;
   }
 
   .item-content {
-
     list-style: none;
     padding: 0 1rem;
     color: $color-blue-price;
 
     &__item {
-
-      padding: .7rem 0;
+      padding: 0.7rem 0;
       border-bottom: 1px solid $color-green;
       text-align: center;
-      
+
       &:last-of-type {
         border-bottom: 0;
       }
-
     }
-
   }
-
 }

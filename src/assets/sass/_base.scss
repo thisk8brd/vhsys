@@ -1,7 +1,7 @@
 //COLORS
 
 $color-primary: rgba(68, 93, 155, 1);
-$color-primary-light: #2C2C2C;
+$color-primary-light: #2c2c2c;
 $color-primary-dark: #43438f;
 
 $color-purple: rgba(125, 91, 225, 1);
@@ -10,7 +10,7 @@ $color-purple-light: rgba(151, 93, 171, 1);
 $color-blue: rgba(31, 160, 197, 1);
 
 $color-blue-dark: rgba(68, 93, 155, 1);
-$color-blue-light: rgba(87, 161, 193 ,1);
+$color-blue-light: rgba(87, 161, 193, 1);
 
 $color-blue-price: rgba(35, 69, 115, 1);
 
@@ -19,11 +19,14 @@ $color-green-dark: rgba(57, 231, 183, 1);
 
 $color-yellow: rgba(245, 197, 43, 1);
 
+$color-grey: #f6f7fa;
+
 html {
   font-size: 10px;
 }
 
-html, * {
+html,
+* {
   margin: 0;
   padding-bottom: 0;
 }
@@ -37,7 +40,6 @@ body {
   font-size: 1.6rem;
 
   overflow-x: hidden;
-
 }
 
 .container {
@@ -46,19 +48,17 @@ body {
 }
 
 a {
-  color: rgba(255,255,255,2);
+  color: rgba(255, 255, 255, 2);
   text-decoration: none;
-  transition: all .5s;
+  transition: all 0.5s;
 
   &:hover {
-    border-bottom: 1px solid rgba($color: #fff, $alpha: .5)
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
   }
 }
 
 .is {
-
   &--green {
     color: rgba(57, 232, 184, 1);
   }
-
 }
